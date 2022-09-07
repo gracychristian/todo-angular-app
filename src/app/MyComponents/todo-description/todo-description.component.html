@@ -1,0 +1,6 @@
+<div class="container">
+<div *ngFor="let todo of selectedTodo | keyvalue;" class="detail">
+ <p>{{todo.key}} : {{todo.value}} </p>
+</div>
+<a routerLink="../../todos" class="btn btn-primary">Back</a>
+</div>

@@ -1,0 +1,11 @@
+.container{
+  background-color: pink;
+  padding: 100px;
+  width:100%;
+}
+.detail{
+
+
+  font-size: 20px;
+  font-weight: bold;
+}
