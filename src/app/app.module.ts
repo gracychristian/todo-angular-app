@@ -22,7 +22,7 @@ import { NgxBootstrapMultiselectModule } from 'ngx-bootstrap-multiselect';
     FormsModule,
     QRCodeModule, 
     ColorPickerModule,
-    NgxBootstrapMultiselectModule
+    NgxBootstrapMultiselectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

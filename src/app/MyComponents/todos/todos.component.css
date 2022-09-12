@@ -1,79 +1,100 @@
-*{
+/* *{
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 
   font-family: sans-serif;
-}
-h1{
+} */
+/* h1{
   color: crimson;
-}
-.todo {
-	/* display: flex; */
+} */
+/* .todo {
+	display: flex; 
 
 	padding: 10px 15px;
 	background-color: #FFF;
 	border-bottom: 1px solid #DDD;
-}
-.todo:nth-child(even) {
+} */
+/* .todo:nth-child(even) {
 	background-color: #EEE;
 }
 
 .todo:last-of-type {
 	border-bottom: 0;
-}
+} */
 
-.todo .id {
+/* .todo .id {
 	flex: 1 1 50px;
 }
 
 .todo .content {
 	flex: 1 1 100%;
-}
-.content{
-  /* display: flex; */
+} */
+/* .content{
+  display: flex;
   justify-content: space-around;
-}
-.todo-cont{
-  cursor: pointer;
+} */
+.todo-cont {
+	cursor: pointer;
 }
 
-  /* .todo.done .content {
+/* .todo.done .content {
     text-decoration: line-through;
   } */
 
-.todo-input, .tododesc-input{
+.max-chac {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 7ch;
+}
+
+.todo-input,
+.tododesc-input {
 	display: block;
 	width: 100%;
 	padding: 10px 15px;
 	appearance: none;
-	border: none;
-	background-color: #F3F3F3;
+	background-color: #ffffff;
 	margin-top: 15px;
-	font-size: 20px;
+	font-size: 18px;
 	outline: none;
 }
 
+/* 
 .notodos-msg{
   text-align: center;
   font-size: 20px;
   color: crimson;
-}
+} */
 
 .todo-submit {
-	display: block;
-	width: 100%;
-	max-width: 200px;
-	appearance: none;
-	border: none;
-	outline: none;
-	background: none;
+	/* display: block; */
+	/* width: 100%; */
+	/* max-width: 200px; */
+	/* appearance: none; */
+	/* border: none; */
+	/* outline: none; */
+	/* background: none; */
 
-	background-color: #FE4880;
-	color: #FFF;
-	margin: 15px auto;
+	background-color: #FF8CD9;
+	/* color: #FFF; */
+	/* margin: 15px auto; */
 
-	padding: 10px 15px;
-	font-size: 18px;
-	font-weight: 700;
+	/* padding: 10px 15px; */
+	/* font-size: 18px; */
+	/* font-weight: 700; */
+}
+
+.list-container {
+	margin: 50px auto !important;
+	padding: 25px !important;
+	border-radius: 1.5rem;
+	box-shadow: 3px 5px rgb(6 6 6 / 33%);
+	background: linear-gradient(to right top, #7dded8, #56d6fa, #77c6ff, #c2acff, #ff8cd9);
+	background-repeat: no-repeat;
+}
+
+.strike {
+	text-decoration: line-through;
 }

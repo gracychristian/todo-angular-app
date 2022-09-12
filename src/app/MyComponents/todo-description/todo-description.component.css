@@ -1,11 +1,13 @@
-.container{
-  background-color: pink;
-  padding: 100px;
-  width:100%;
+.desc-container {
+  margin: 50px auto !important;
+  padding: 25px !important;
+  border-radius: 1.5rem;
+  box-shadow: 3px 5px rgb(6 6 6 / 33%);
+  background: linear-gradient(to right top, #7dded8, #56d6fa, #77c6ff, #c2acff, #ff8cd9);
+  background-repeat: no-repeat;
 }
-.detail{
 
-
+/* .detail {
   font-size: 20px;
   font-weight: bold;
-}
+} */

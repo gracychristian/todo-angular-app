@@ -4,8 +4,9 @@ import { TodosComponent } from './MyComponents/todos/todos.component';
 import { TodoDescriptionComponent } from './MyComponents/todo-description/todo-description.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/todos', pathMatch: 'full' },
   { path: 'todos', component: TodosComponent },
-  { path: 'details/:id', component: TodoDescriptionComponent }
+  { path: 'todo/:id', component: TodoDescriptionComponent }
 ];
 
 @NgModule({

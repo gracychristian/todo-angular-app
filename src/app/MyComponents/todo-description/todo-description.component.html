@@ -1,6 +1,8 @@
-<div class="container">
-<div *ngFor="let todo of selectedTodo | keyvalue;" class="detail">
- <p>{{todo.key}} : {{todo.value}} </p>
-</div>
-<a routerLink="../../todos" class="btn btn-primary">Back</a>
+<div class="desc-container bg-white w-1/2">
+  <div *ngFor="let todo of selectedTodo | keyvalue;" class="detail">
+    <p class="text-3xl font-medium my-2">{{todo.key}} : {{todo.value}} </p>
+  </div>
+  <div class="flex justify-end">
+    <a routerLink="../../todos" class="btn bg-pink-400 border border-yellow-500 text-white">Back</a>
+  </div>
 </div>

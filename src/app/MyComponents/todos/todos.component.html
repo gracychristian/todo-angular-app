@@ -1,6 +1,8 @@
-<div class="todos">
+<!-- <div class="todos">
   <form (submit)="addTodo()">
-    <h1>Todos</h1>
+    <h1 class="text-3xl font-bold underline">
+      Todos
+    </h1>
     <input type="text" name="inputTodo" placeholder="Enter Todo..." class="todo-input" (input)="TodoInput($event)"
       [(ngModel)]="inputTodo">
 
@@ -30,30 +32,56 @@
     </tr>
   </table>
 
+</div> -->
+<div class="list-container bg-white w-1/2">
+  <h1 class="text-center text-5xl font-bold">
+    Todos
+  </h1>
+  <form (submit)="addTodo()" class="flex flex-col mt-10">
+    <input type="text" name="inputTodo" placeholder="Enter Todo..."
+      class="border border-purple-400 ng-pristine ng-untouched ng-valid rounded-lg todo-input"
+      (input)="TodoInput($event)" [(ngModel)]="inputTodo">
 
-  <!-- <div *ngFor="let todo of todos; let i= index;" class="todo {{(todo.completed
-    ? 'done' : '')}}">
-    <div class="id">{{ i }}</div>
-    <div [ngStyle]="{'background-color': i==0 ? 'lime' : i==1 ? 'orange' :
-      'tomato' }" class="content">
-      <span (click)="descTodo(todo.content)" class="todo-cont"> {{todo.content}} </span>
-      <span> {{todo.description}}  </span>
-      <span>status = {{todo.completed}}</span>
-    </div>
-    <button class="done" (click)=toggleDone(i)>done</button>
-    <button class="delete" (click)=deleteTodo(i)>Remove</button>
-  </div> -->
+    <input type="text" name="inputTododesc" placeholder="Enter Description..."
+      class="border border-purple-400 ng-pristine ng-untouched ng-valid rounded-lg tododesc-input"
+      (input)="TododescInput($event)" [(ngModel)]="inputTododesc">
+
+    <!-- <input type="submit" [disabled]="isDisable" value="Add Todo" class="todo-submit"> -->
+    <button type="submit" [disabled]="isDisable"
+      class="border border-yellow-400 font-semibold mt-10 mx-auto py-4 rounded-full shadow-2xl text-3xl text-white todo-submit px-6">
+      Add todo
+      <i class="fa fa-plus"></i>
+    </button>
+
+  </form>
+
+  <div class="mt-8">
+    <table class="table" *ngIf="this.todos.length > 0;">
+      <tr class="text-3xl">
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+
+      <tr *ngFor="let todo of todos; let i= index;" (click)=toggleDone(i)
+        [ngStyle]="{'background-color': i==0 ? 'lime' : i==1 ? 'orange' : 'tomato' }"
+        class="text-2xl border border-white align-baseline font-medium content todo-cont">
+        <td class="px-2 py-4 max-chac" [ngClass]="{'strike': todo.completed === 'done'}">
+          {{todo.content}}</td>
+        <td class="p-2 max-chac" [ngClass]="{'strike': todo.completed === 'done'}"> {{todo.description}} </td>
+        <td class="p-2">{{todo.completed}}</td>
+        <!-- <button class="bg-purple-400 rounded-full w-28" (click)=toggleDone(i)>{{todo.completed === "done" ? "undone" :
+          "done"}}</button> -->
+        <button class="bg-white border border-blue-900 text-blue-500 px-1.5 mx-3 rounded-full"
+          (click)="descTodo(todo.content)">
+          <i class="fa fa-info mx-1.5"></i>
+        </button>
+        <button class="bg-white border border-red-400 px-2 rounded-full text-red-500" (click)=deleteTodo(i)>
+          <i class="fa fa-trash"></i>
+        </button>
+      </tr>
+    </table>
+    <h3 class="text-center font-bold h3" *ngIf="this.todos.length===0;">Add some todos</h3>
+  </div>
 </div>
-<!-- 
-<h3>angularx-qrcode demo implementation</h3>
-<qrcode #parent [qrdata]="qrdata" [size]="256" [level]="'M'"></qrcode>
-<br>
-<button (click)="saveAsImage(parent)">Download QR Code Image</button> -->
-
-
-
-<!-- <label>
-  Typing your data
-<input type="text" (keyup)="change($event)"/>
-</label>
-<button type="button" class="btn btn-primary" (click)="generateQrCode()" style="margin-right:10px;">generate QrCode</button> -->
